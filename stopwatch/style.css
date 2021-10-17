@@ -41,14 +41,9 @@ body {
   font-size: 11rem;
 }
 
-.stopWatch__seconds {
-  background-image: linear-gradient(to right, #06beb6, #48b1bf);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.stopWatch__tens {
+.stopWatch__tens,
+.stopWatch__seconds,
+.stopWatch__minutes {
   background-image: linear-gradient(to right, #06beb6, #48b1bf);
   -webkit-background-clip: text;
   background-clip: text;
