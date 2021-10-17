@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8));
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stopWatch-heading {
+  font-size: 10rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: -20rem;
+  margin-bottom: 5rem;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+.stopWatch__container {
+  font-size: 11rem;
+}
+
+.stopWatch__seconds {
+  background-image: linear-gradient(to right, #06beb6, #48b1bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stopWatch__tens {
+  background-image: linear-gradient(to right, #06beb6, #48b1bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.buttons {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.btn {
+  font-size: 2.3rem;
+  padding: 1rem 2rem;
+  min-width: 80%;
+  border-radius: 50rem;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #06beb6, #48b1bf);
+  color: #fff;
+  margin-right: 2rem;
+  transition: all 0.2s;
+}
+
+.btn:last-child {
+  margin-right: 0;
+}
+
+.btn:active {
+  transform: translateY(0.4rem);
+}
