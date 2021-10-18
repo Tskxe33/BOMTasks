@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>math.js UI</title>
+	</head>
+	<body>
+		<h1>math.js UI</h1>
+		<form>
+			<input type="text" id="math-expr" name="math-expr" placeholder="Math expression">
+			<button type="submit">=</button>
+			<input type="text" id="result" readonly>
+		</form>
+		<section>
+			<label>Load expressions: </label>
+			<input type="file" id="math-exprs" name="math-exprs" accept=".json">
+			<ul></ul>
+		</section>
+		<script src="ParsingJSON.js" defer></script>
+	</body>
+</html>
