@@ -7,15 +7,11 @@ let redInterval;
 let yellowInterval;
 let greenInterval;
 
-function stopInterval(interval) {
-  clearInterval(interval);
-}
-
 function activeRed() {
   redInterval = setInterval(function () {
     redEl.classList.add("active-red");
     greenEl.classList.remove("active-green");
-  }, 3000);
+  }, 3800);
 }
 
 activeRed();
@@ -23,7 +19,7 @@ activeRed();
 function activeYellow() {
   yellowInterval = setInterval(() => {
     yellowEl.classList.add("active-yellow");
-  }, 5000);
+  }, 5300);
 }
 
 activeYellow();
@@ -33,6 +29,10 @@ function activeGreen() {
     greenEl.classList.add("active-green");
     redEl.classList.remove("active-red");
     yellowEl.classList.remove("active-yellow");
+    clearInterval(redInterval);
+    clearInterval(yellowInterval);
+    activeRed();
+    activeYellow();
   }, 7500);
 }
 
