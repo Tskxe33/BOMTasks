@@ -5,7 +5,7 @@ const btnStop = document.querySelector(".btn-stop");
 const btnReset = document.querySelector(".btn-reset");
 
 let interval; // COMMENT: works only globally
-let seconds, tens, minutes;
+let seconds, hundredths, minutes;
 
 function init() {
   const secondsEl = document.querySelector(".stopWatch__seconds");
@@ -17,13 +17,13 @@ function init() {
   secondsEl.textContent = `00`;
   tensEl.textContent = `00`;
   seconds = 0;
-  tens = 0;
+  hundredths = 0;
   minutes = 0;
 }
 
 init();
 
-function getInterval() { //promeniti naziv 
+function startInterval() {
   clearInterval(interval);
   interval = setInterval(() => runTimer(), 10);
 }
@@ -36,9 +36,9 @@ function runTimer() {
   const secondsEl = document.querySelector(".stopWatch__seconds");
   const tensEl = document.querySelector(".stopWatch__tens");
   const minutesEl = document.querySelector(".stopWatch__minutes");
-  tens++; // stotinke
-  if (tens > 99) {
-    tens = 0;
+  hundredths++; // stotinke
+  if (hundredths > 99) {
+    hundredths = 0;
     ++seconds;
     secondsEl.textContent = seconds < 10 ? `0${seconds}` : seconds;
   }
@@ -49,10 +49,10 @@ function runTimer() {
     minutesEl.textContent = minutes < 10 ? `0${minutes}` : minutes;
   }
 
-  tensEl.textContent = tens < 10 ? `0${tens}` : tens;
+  tensEl.textContent = hundredths < 10 ? `0${hundredths}` : hundredths;
 }
 
-btnStart.addEventListener("click", getInterval);
+btnStart.addEventListener("click", startInterval);
 
 btnStop.addEventListener("click", stopInterval);
 
