@@ -73,14 +73,16 @@ function displayResult(result) {
   document.getElementById("result").value = result;
 }
 
-document.forms[0].addEventListener("submit", function (evt) {
+document.forms[0].addEventListener("submit", async function (evt) {
   evt.preventDefault();
   const formElements = evt.target.elements;
 
   const expr = new URLSearchParams();
   expr.set("expr", formElements["math-expr"].value);
 
-  calculateExpression(expr).then((result) => displayResult(result));
+  // calculateExpression(expr).then((result) => displayResult(result));
+  const response =  await calculateExpression(expr);
+  displayResult(response)
 });
 
 async function calculateExpressions(exprs) {
@@ -128,8 +130,9 @@ document
     if (!evt.target.files.length) return;
 
     const response = await evt.target.files[0].text();
-    const result = await calculateExpressions(response);
-    displayResults(result);
+    const results =  await calculateExpressions(response);
+    
     let exprs = JSON.parse(response);
     displayExpressions(exprs.expr);
+    displayResults(results.result);
   });
