@@ -1,0 +1,22 @@
+--- Front-End Web Developer, Part VIII - Browser Object Model (BOM) ---
+Collection of assignments, that should be followed in this order:
+	1. Stopwatch
+		Create Web application that works like a stopwatch. User can start and stop stopwatch. When stopwatch is started, application displays elapsed time in real-time.
+		NOTE: Stopwarch resolution should be 1/100s.
+		NOTE: Pay attention to the look & feel (UX) of the application.
+
+	2. Traffic Light
+		Create Web application that displays traffic-light that periodically changes active light.
+		NOTE: Pay attention to the look & feel (UX) of the application.
+
+	3. Login
+		Create Login page for hipotetical Web application, and simulate login with username and password. If provided credentials are not valid, application should display error message. If provided credentials are valid, application should navigate to the Homepage. Forgot password hyperlink should point to appropriate page.
+		NOTE: Login page should consists of form with inputs for username and password, remember me checkbox and login button. Also, forgot password hyperlink should be displayed.
+		NOTE: Pay attention to the look & feel (UX) of the application.
+
+	4. Login v2
+		Improve Login functionality to keep info about logged in user. If user selected remember me option when logging in, that info should be remembered for future sessions.
+		If logged in user navigates to Login page, user should be automatically redirected to Homepage.
+		If anonymous user navigates to Homepage, user should be automatically redirected to login page.
+		User should be able to logout from Homepage.
+		NOTE: Pay attention to the look & feel (UX) of the application.
