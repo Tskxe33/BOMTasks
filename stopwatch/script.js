@@ -23,7 +23,7 @@ function init() {
 
 init();
 
-function getInterval() {
+function getInterval() { //promeniti naziv 
   clearInterval(interval);
   interval = setInterval(() => runTimer(), 10);
 }
@@ -36,7 +36,7 @@ function runTimer() {
   const secondsEl = document.querySelector(".stopWatch__seconds");
   const tensEl = document.querySelector(".stopWatch__tens");
   const minutesEl = document.querySelector(".stopWatch__minutes");
-  tens++;
+  tens++; // stotinke
   if (tens > 99) {
     tens = 0;
     ++seconds;
