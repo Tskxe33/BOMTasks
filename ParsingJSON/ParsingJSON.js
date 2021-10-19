@@ -81,8 +81,8 @@ document.forms[0].addEventListener("submit", async function (evt) {
   expr.set("expr", formElements["math-expr"].value);
 
   // calculateExpression(expr).then((result) => displayResult(result));
-  const response =  await calculateExpression(expr);
-  displayResult(response)
+  const response = await calculateExpression(expr);
+  displayResult(response);
 });
 
 async function calculateExpressions(exprs) {
@@ -124,15 +124,45 @@ function displayResults(results) {
 //     });
 //   });
 
+// document
+//   .getElementById("math-exprs")
+//   .addEventListener("change", async function (evt) {
+//     if (!evt.target.files.length) return;
+
+//     const response = await evt.target.files[0].text();
+//     const results = await calculateExpressions(response);
+
+//     let exprs = JSON.parse(response);
+//     displayExpressions(exprs.expr);
+//     displayResults(results.result);
+//   });
+
+// ------------ version 1
+
+// document
+//   .getElementById("math-exprs")
+//   .addEventListener("change", async function (evt) {
+//     if (!evt.target.files.length) return;
+
+//     const response = await evt.target.files[0].text();
+//     const results = calculateExpressions(response);
+//     let exprs = JSON.parse(response);
+//     const res = await results;
+//     displayExpressions(exprs.expr);
+
+//     displayResults(res.result);
+//   });
+
 document
   .getElementById("math-exprs")
   .addEventListener("change", async function (evt) {
     if (!evt.target.files.length) return;
 
     const response = await evt.target.files[0].text();
-    const results =  await calculateExpressions(response);
-    
+    const results = calculateExpressions(response);
     let exprs = JSON.parse(response);
+    const res = await results;
     displayExpressions(exprs.expr);
-    displayResults(results.result);
+
+    displayResults(res.result);
   });
