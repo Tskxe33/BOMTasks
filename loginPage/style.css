@@ -1,3 +1,5 @@
+/* ------------------- BASIC VALUES ---------------------- */
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 
 * {
@@ -19,6 +21,8 @@ body {
 
   /* background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)); */
 }
+
+/* ---------------------- LOGIN PAGE ------------------------- */
 
 #myVideo {
   width: 100vw;
@@ -163,4 +167,28 @@ body {
   background-color: #fff;
   color: #ff9e32;
   border: 1px solid #ff9e32;
+}
+
+/* ------------------------- HOME PAGE ---------------------------- */
+
+#myVideoHome {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  filter: brightness(0.2);
+}
+
+.home__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__heading {
+  font-size: 4rem;
 }
