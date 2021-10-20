@@ -141,6 +141,11 @@ body {
   color: #ff9e32;
 }
 
+.error-message {
+  color: #ff7979;
+  display: none;
+}
+
 .form__btn {
   padding: 1rem 3rem;
   margin-top: 4rem;
@@ -169,6 +174,10 @@ body {
   color: #ff9e32;
   border: 1px solid #ff9e32;
   outline: none;
+}
+
+.form__btn-register {
+  text-decoration: none;
 }
 
 /* ------------------------- HOME PAGE ---------------------------- */
