@@ -34,23 +34,37 @@
       <form action="GET" class="aside__form form__login">
         <label for="username" class="form__label">
           <i class="fas fa-user form__icon"></i>
-          <input type="text" class="form__input" />
+          <input type="text" class="form__input" id="username" />
         </label>
 
-        <label for="username" class="form__label">
+        <label for="password" class="form__label">
           <i class="fas fa-key form__icon"></i>
-          <input type="password" class="form__input" />
+          <input type="password" class="form__input" id="password" />
         </label>
+
+        <p
+          class="aside__paragraph error-message animate__animated"
+          id="errorMessage"
+        >
+          Wrong username or password!
+        </p>
 
         <div class="form__password-container">
-          <input type="checkbox" checked class="form__remember-me" />Remember me
-          <a href="#" class="form__forgot-password">Forgot your password?</a>
+          <input
+            type="checkbox"
+            id="rememberMe"
+            checked
+            class="form__remember-me"
+          />Remember me
+          <a href="#" class="form__forgot-password" id="forgotPassword"
+            >Forgot your password?</a
+          >
+        </div>
+        <div class="form__buttons">
+          <button class="form__btn form__btn-login">Sign In</button>
+          <a href="#" class="form__btn form__btn-register">Sign Up</a>
         </div>
       </form>
-      <div class="form__buttons">
-        <button class="form__btn form__btn-login">Sign In</button>
-        <button class="form__btn form__btn-register">Sign Up</button>
-      </div>
     </aside>
 
     <script src="./js/login.js"></script>
