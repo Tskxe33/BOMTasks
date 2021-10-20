@@ -5,11 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
       <source src="bgVideo.mp4" type="video/mp4" />
     </video>
+    <aside class="aside animate__animated animate__fadeInLeft">
+      <h1 class="aside__heading">Hello Friend!</h1>
+      <p class="aside__paragraph">
+        Enter your personal details and start journey with us
+      </p>
+      <div class="aside__social-container">
+        <a href="#" class="aside__social"
+          ><i class="fab fa-facebook-square fa-2x aside__facebook"></i
+        ></a>
+        <a href="#" class="aside__social"
+          ><i class="fab fa-google-plus-g fa-2x aside__google"></i
+        ></a>
+        <a href="#" class="aside__social"
+          ><i class="fab fa-linkedin fa-2x aside__linkedIn"></i
+        ></a>
+      </div>
+      <form action="GET" class="aside__form">
+        <label for="username" class="form__label">
+          <i class="fas fa-user form__icon"></i>
+          <input type="text" class="form__input" />
+        </label>
+
+        <label for="username" class="form__label">
+          <i class="fas fa-key form__icon"></i>
+          <input type="password" class="form__input" />
+        </label>
+
+        <div class="form__password-container">
+          <input type="checkbox" checked class="form__remember-me" />Remember me
+          <a href="#" class="form__forgot-password">Forgot your password?</a>
+        </div>
+
+        <div class="form__buttons">
+          <button class="form__btn form__btn-login">Sign In</button>
+          <button class="form__btn form__btn-register">Sign Up</button>
+        </div>
+      </form>
+    </aside>
+
+    <script
+      src="https://kit.fontawesome.com/287f8d32d2.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </body>
 </html>
