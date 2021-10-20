@@ -1,5 +1,9 @@
 "use strict";
+
+let origin = window.location.origin;
+const loginPathName = "/loginPage/index.html";
+
 document.getElementById("goBack").addEventListener("click", function (e) {
   e.preventDefault();
-  location.replace("http://127.0.0.1:5500/loginPage/index.html");
+  location.replace(`${origin}${loginPathName}`);
 });

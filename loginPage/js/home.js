@@ -1,7 +1,10 @@
 "use strict";
 
+let origin = window.location.origin;
+const loginPathName = "/loginPage/index.html";
+
 const logout = document.getElementById("logout");
 
 logout.addEventListener("click", function () {
-  location.replace("http://127.0.0.1:5500/loginPage/index.html");
+  location.replace(`${origin}${loginPathName}`);
 });

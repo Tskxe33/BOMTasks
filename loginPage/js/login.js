@@ -3,7 +3,10 @@
 // const rememberMe = document.getElementById("rememberMe");
 const loginForm = document.querySelector(".form__login");
 
-let loggedIn = false;
+let origin = window.location.origin;
+const homePathName = "/loginPage/home.html";
+const loginPathName = "/loginPage/index.html";
+const resetPasswordPathName = "/loginPage/resetPassword.html";
 
 function displayErrorMessage() {
   const message = document.querySelector(".error-message");
@@ -14,9 +17,7 @@ function displayErrorMessage() {
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
   getUser().then((res) =>
-    res
-      ? location.replace("http://127.0.0.1:5500/loginPage/home.html")
-      : displayErrorMessage()
+    res ? location.replace(`${origin}${homePathName}`) : displayErrorMessage()
   );
 });
 
@@ -44,5 +45,5 @@ function getUser() {
 document
   .getElementById("forgotPassword")
   .addEventListener("click", function () {
-    location.replace("http://127.0.0.1:5500/loginPage/resetPassword.html");
+    location.replace(`${origin}${resetPasswordPathName}`);
   });
