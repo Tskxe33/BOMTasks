@@ -16,10 +16,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
   /* background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)); */
 }
 
@@ -30,6 +27,140 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   opacity: 0.7;
+}
+
+.aside {
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+  color: #777;
+
+  width: 30%;
+  min-height: 100%;
+  position: fixed;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside__heading {
+  color: #ffbe76;
+  font-weight: 300;
+  font-size: 4rem;
+  margin-bottom: 2.6rem;
+}
+
+.aside__paragraph {
+  max-width: 85%;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.1rem;
+}
+
+.aside__social {
+  color: #777;
+  margin-left: 1.2rem;
+}
+
+.aside__facebook {
+  transition: all 0.2s;
+}
+
+.aside__facebook:hover {
+  color: #3b5998;
+}
+
+.aside__google {
+  transition: all 0.2s;
+}
+
+.aside__google:hover {
+  color: #db4437;
+}
+
+.aside__linkedIn {
+  transition: all 0.2s;
+}
+
+.aside__linkedIn:hover {
+  color: #0077b5;
+}
+
+/* -------------- ASIDE FORM ---------------- */
+
+.aside__form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  width: 100%;
+}
+
+.form__input {
+  padding: 1rem 0;
+  padding-left: 5rem;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #777;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 30rem;
+  outline: none;
+}
+
+.form__icon {
+  position: relative;
+  left: 12%;
+}
+
+.form__password-container {
+  margin-top: 3rem;
+}
+
+.form__remember-me {
+  margin-right: 0.5rem;
+}
+
+.form__forgot-password {
+  text-decoration: none;
+  color: #ffbe76;
+  margin-left: 2rem;
+  transition: all 0.2s;
+}
+.form__forgot-password:hover {
+  color: #ff9e32;
+}
+
+.form__btn {
+  padding: 1rem 3rem;
+  margin-top: 4rem;
+  margin-right: 1rem;
+  background-color: #ff9e32;
+  color: #fff;
+  border: none;
+  border-radius: 30rem;
+  font-size: 1.8rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.form__btn:hover {
+  transform: translateY(-0.25rem);
+}
+
+.form__btn:active {
+  transform: translateY(0rem);
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.form__btn-register {
+  background-color: #fff;
+  color: #ff9e32;
+  border: 1px solid #ff9e32;
 }
