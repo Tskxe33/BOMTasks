@@ -1,10 +1,9 @@
 "use strict";
 
-let origin = window.location.origin;
-const loginPathName = "/loginPage/index.html";
+import * as pathNames from "./modules/pathNames.js";
 
 const logout = document.getElementById("logout");
 
 logout.addEventListener("click", function () {
-  location.replace(`${origin}${loginPathName}`);
+  location.replace(`${pathNames.origin}${pathNames.loginPathName}`);
 });
