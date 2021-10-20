@@ -163,10 +163,12 @@ body {
   box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
-.form__btn-register {
+.form__btn-register,
+.form__btn-logout {
   background-color: #fff;
   color: #ff9e32;
   border: 1px solid #ff9e32;
+  outline: none;
 }
 
 /* ------------------------- HOME PAGE ---------------------------- */
@@ -185,6 +187,7 @@ body {
 .home__container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
