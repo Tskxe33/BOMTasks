@@ -3,17 +3,23 @@
     {
       "id": "0c6d42de-2a05-4c68-90e8-f036a9c418c8",
       "username": "user1",
-      "password": "user1"
+      "password": "user1",
+      "name": "John",
+      "email": "john@example.com"
     },
     {
       "id": "d8ea2523-a3db-4217-8db6-3d48ab2340c2",
       "username": "user2",
-      "password": "user2"
+      "password": "user2",
+      "name": "Jack",
+      "email": "jack@example.com"
     },
     {
       "id": "a1ddd703-f028-49dc-b5d3-f1b3886daa44",
       "username": "user3",
-      "password": "user3"
+      "password": "user3",
+      "name": "Marry",
+      "email": "marry@example.com"
     }
   ]
 }
