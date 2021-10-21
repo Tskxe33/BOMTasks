@@ -12,7 +12,6 @@ loginForm.addEventListener("submit", function (e) {
 
   getUser().then((user) => {
     const rememberMe = document.getElementById("rememberMe").checked;
-    console.log(rememberMe);
     if (user) {
       rememberMe
         ? cookies.rememberCookie("userID", cookies.deleteUserPassword(user))
