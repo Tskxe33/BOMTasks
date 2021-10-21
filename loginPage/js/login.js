@@ -15,8 +15,8 @@ loginForm.addEventListener("submit", function (e) {
     console.log(rememberMe);
     if (user) {
       rememberMe
-        ? cookies.rememberCookie("userID", user.id)
-        : cookies.saveCookie("userID", user.id);
+        ? cookies.rememberCookie("userID", cookies.deleteUserPassword(user))
+        : cookies.saveCookie("userID", cookies.deleteUserPassword(user));
       location.replace(`${pathNames.origin}${pathNames.homePathName}`);
     } else {
       displayErrorMessage();

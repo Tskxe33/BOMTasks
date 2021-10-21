@@ -30,3 +30,9 @@ function yesterday() {
 export function removeCookie(name) {
   document.cookie = `${name}=; expires=${yesterday().toUTCString()}`;
 }
+
+export function deleteUserPassword(user) {
+  const cookie = user;
+  delete cookie.password;
+  return JSON.stringify(cookie);
+}
