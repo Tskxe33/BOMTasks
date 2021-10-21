@@ -1,0 +1,14 @@
+--- Front-End Web Developer, Part IX - Asynchronous JavaScript ---
+Collection of assignments, that should be followed in this order:
+	1. Restaurants Selector v3
+		Improve Restaurant Selector application to load its data from JSON files.
+		
+	2. Login v3
+		Improve Login functionality in the following ways:
+			- when logging in a user, check provided credentials against the list of available users.
+			- load available users from JSON file. User info consists at least of its username, password, name and e-mail address.
+			- store info about logged in user in a cookie in JSON format.
+			- show logged in user info (its name) on Homepage.
+
+	3. Chuck Norris Database
+		Be creative with http://www.icndb.com/
