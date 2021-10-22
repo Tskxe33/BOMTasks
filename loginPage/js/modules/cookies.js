@@ -1,6 +1,6 @@
-export function saveCookie(name, value) {
-  document.cookie = `${name}=${value}`;
-}
+// export function saveCookie(name, value) {
+//   document.cookie = `${name}=${value}`;
+// }
 
 export function getCookieValue(cookieName) {
   let cookie = document.cookie
@@ -10,15 +10,16 @@ export function getCookieValue(cookieName) {
   return cookie;
 }
 
-function expiryDate() {
+export function expiryDate() {
   const date = new Date();
   date.setMonth(date.getMonth() + 1);
 
   return date;
 }
 
-export function rememberCookie(name, value) {
-  document.cookie = `${name}=${value}; expires=${expiryDate().toUTCString()}`;
+export function rememberCookie(name, value, days) {
+  // document.cookie = `${name}=${value}; expires=${expiryDate().toUTCString()}`;
+  document.cookie = `${name}=${value}; expires=${days}`;
 }
 
 function yesterday() {

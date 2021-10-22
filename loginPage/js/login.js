@@ -14,8 +14,16 @@ loginForm.addEventListener("submit", function (e) {
     const rememberMe = document.getElementById("rememberMe").checked;
     if (user) {
       rememberMe
-        ? cookies.rememberCookie("userID", cookies.deleteUserPassword(user))
-        : cookies.saveCookie("userID", cookies.deleteUserPassword(user));
+        ? cookies.rememberCookie(
+            "userID",
+            cookies.deleteUserPassword(user),
+            cookies.expiryDate().toUTCString()
+          )
+        : cookies.rememberCookie(
+            "userID",
+            cookies.deleteUserPassword(user),
+            ""
+          );
       location.replace(`${pathNames.origin}${pathNames.homePathName}`);
     } else {
       displayErrorMessage();
