@@ -1,16 +1,18 @@
 import { getUser } from "./modules/users.js";
 import * as pathNames from "./modules/pathNames.js";
 import * as cookies from "./modules/cookies.js";
+import { userToHome } from "./modules/users.js";
 
-document.cookie
-  ? (location.href = `${pathNames.origin}${pathNames.homePathName}`)
-  : "";
+userToHome();
 
 const loginForm = document.querySelector(".form__login");
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  getUser().then((user) => {
+  const password = document.getElementById("password"); //parametre ubaciti
+  const username = document.getElementById("username");
+
+  getUser(password, username).then((user) => {
     const rememberMe = document.getElementById("rememberMe").checked;
     if (user) {
       rememberMe
