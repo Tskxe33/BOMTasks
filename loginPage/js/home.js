@@ -5,7 +5,7 @@ const logout = document.getElementById("logout");
 
 if (
   !cookies.getCookieValue("userID") &&
-  location.href == `${pathNames.origin}${pathNames.homePathName}`
+  location.href == `${pathNames.origin}${pathNames.homePathName}` //
 ) {
   location.href = `${pathNames.origin}${pathNames.loginPathName}`;
 }

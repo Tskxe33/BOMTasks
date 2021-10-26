@@ -4,7 +4,7 @@ function fetchUsers() {
 }
 
 export function getUser() {
-  const password = document.getElementById("password");
+  const password = document.getElementById("password"); //parametre ubaciti
   const username = document.getElementById("username");
   return fetchUsers().then((res) => {
     return res.users.find((user) => {
@@ -12,7 +12,7 @@ export function getUser() {
         user.username === username.value.trim() &&
         user.password === password.value
       ) {
-        document.querySelector(".error-message").style.display = "none";
+        document.querySelector(".error-message").style.display = "none"; //
         return user;
       }
     });
