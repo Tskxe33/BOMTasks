@@ -180,6 +180,10 @@ body {
   text-decoration: none;
 }
 
+#rememberMe {
+  accent-color: #ff9e32;
+}
+
 /* ------------------------- HOME PAGE ---------------------------- */
 
 #myVideoHome {
