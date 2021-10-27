@@ -1,9 +1,17 @@
 import * as pathNames from "./modules/pathNames.js";
 import * as cookies from "./modules/cookies.js";
 import { checkIfUserLoggedIn } from "./modules/users.js";
+
 const logout = document.getElementById("logout");
 
-checkIfUserLoggedIn();
+function userToLogin() {
+  if (
+    checkIfUserLoggedIn() &&
+    location.href == `${pathNames.origin}${pathNames.homePathName}`
+  )
+    location.href = `${pathNames.origin}${pathNames.loginPathName}`;
+}
+userToLogin();
 
 function displayUserName() {
   const message = document.querySelector(".home__heading ");

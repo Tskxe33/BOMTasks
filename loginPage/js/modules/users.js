@@ -24,11 +24,6 @@ export function userToHome() {
     : "";
 }
 
-export function checkIfUserLoggedIn() {
-  if (
-    !cookies.getCookieValue("userID") &&
-    location.href == `${pathNames.origin}${pathNames.homePathName}` //
-  ) {
-    location.href = `${pathNames.origin}${pathNames.loginPathName}`;
-  }
-}
+export const checkIfUserLoggedIn = function () {
+  return !cookies.getCookieValue("userID");
+};
