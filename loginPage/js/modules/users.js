@@ -24,6 +24,8 @@ export function userToHome() {
     : "";
 }
 
+// Vratiti true ili false i onda kreirati funkciju da radi redirekciju
+
 export function checkIfUserLoggedIn() {
   if (
     !cookies.getCookieValue("userID") &&
